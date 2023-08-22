@@ -13,7 +13,16 @@ function toggleNav() {
     // Toggle: Menu Bars Open/Closed
     menuBars.classList.toggle('change');
     // Toggle: Menu Active
-    overlay.classList.toggle
+    overlay.classList.toggle('overlay-active');
+    if(overlay.classList.contains('overlay-active')) {
+        // animate In-overlay
+        overlay.classList.remove('overlay-slide-left');
+        overlay.classList.add('overlay-slide-right');   
+    }else{
+        // animate out-overlay
+        overlay.classList.remove('overlay-slide-right');
+        overlay.classList.add('overlay-slide-left');
+    }
 }
 // Event Listeners 
 menuBars.addEventListener('click', toggleNav);

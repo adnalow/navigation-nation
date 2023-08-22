@@ -33,14 +33,33 @@ body {
   transform: translateX(-100vw);
 }
 
+/* Define animation for sliding right */
+@keyframes slideRight {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+/* Define animation for sliding left */
+@keyframes slideLeft {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+/* Apply animations to the overlay */
 .overlay-slide-right {
-  transition: all o.4s ease-in-out;
-  transform: translateX(0);
+  animation: slideRight 0.5s ease forwards;
 }
 
 .overlay-slide-left {
-  transition: all o.8s ease-in-out;
-  transform: translateX(-100vw);
+  animation: slideLeft 0.5s ease forwards;
 }
 
 /* Nav menu items */
