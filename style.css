@@ -164,7 +164,7 @@ nav li:nth-last-of-type(1) {
 
 
 /* Slide out animation with delay for each nav item */
-.slide-in-1 {
+.slide-out-1 {
   animation: slide-out 0.3s linear 0.5s both;
 }
 
@@ -182,6 +182,7 @@ nav li:nth-last-of-type(1) {
 .slide-out-5 {
   animation: slide-out 0.3s linear 0.1s both;
 }
+
 
 @keyframes slide-out {
   from {
